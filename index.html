@@ -105,20 +105,16 @@
         font-weight: 8;
         transition-duration: 1s;
         position: absolute;
-        left: 50px;
+        left:130px;
+        text-align: center;
+        bottom: 130px;
         width: 300px;
-        bottom: 100px;
         transform: translateY(40px);
     }
     .container1:hover h2
     {
         transform: translateY(-80px);
         color: white;
-    }
-    .hide1
-    {
-        transition-duration: 1s;
-        text-align: center;
     }
     .container1:hover .hide1
     {
@@ -132,9 +128,7 @@
         color:rgb(65, 51, 103);
         position: absolute;
         top: 400px;
-        left: 50px;
         transition-duration: 1s;
-        text-align: center;
 
     }
     .content1 span
@@ -144,20 +138,25 @@
     .hide1
     {
         display: none;
+        transition-duration: 1s;
         position: absolute;
-        margin-top: 5px;
         font-size: 15px;
         width: 500px;
+        left: 30px;
         text-align: center;
     }
     .hide2
     {
         display: block;
-        border: 10px solid rgb(180, 64, 64);
-        width: 1100px;
-        height: 1100px;
-        background-color:brown;
+        border: 10px solid rgb(94, 65, 96);
+        width: 500px;
+        height: 500px;
+        background-color:rgb(94, 65, 96);
         left: 900px;
+    }
+    .container:hover .hide2
+    {
+        transform: translateY(-500px);
     }
 
 </style>
@@ -190,7 +189,6 @@
                 She had a dark soul.
             </p>
         </div>
-        <div class="hide2"></div>
     </div>
 </body>
 </html>
