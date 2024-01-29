@@ -6,28 +6,48 @@
     <title>Document</title>
 </head>
 <style>
+    body
+    {
+        margin: 0px;
+        font-family: 'Raleway', sans-serif;
+    }
     .container{
-        margin-left: 50px;
         position: relative;
         display: block;
     }
-    .container div
-    {
-        width: 500px;
+    .container h2{
+        font-size: 40px;
+        font-weight: 8;
+        transition-duration: 1s;
+        position: absolute;
+        width: 300px;
+        bottom: 5px;
     }
-    .img
+    .pic
+    {
+        display: flex;
+        position: absolute;
+        box-sizing: content-box;  
+        border: 1px solid rgb(0, 0, 0);
+        width: 500px;
+        height: 500px;
+        left: 40px;
+        overflow: hidden;
+    }
+    .pic img
     {
         filter:brightness(40%);
-        position: absolute;
         transition-duration: 1s;
-
+        width: 600px;
+        height: 500px;
+        position: absolute;
+        left: -40px;
+        border-color: white;
     }
-    .container:hover .img
+    .container:hover .pic img
     {
-       
         filter:brightness(100%);
-        transform: translateX(20px);
-    
+        transform: translateX(30px);
     }
     .container:hover .content
     {
@@ -39,12 +59,13 @@
     }
     .content
     {
+        width: 500px;
         text-transform: uppercase;
         font-size: 30px;
         color: white;
         position: absolute;
         top: 400px;
-        left: 50px;
+        left: 70px;
         transition-duration: 1s;
 
     }
@@ -63,38 +84,41 @@
         display: block;
         position: relative;
         left: 700px;
-    }
-    .container1 div
-    {
-        width: 500px;
+        width:500px;
+        text-align: center;
+        width:max-content;
     }
     .img1
     {
         filter:brightness(40%);
         position: absolute;
         transition-duration: 1s;
-
     }
     .container1:hover .img1
     {
        
         filter:brightness(100%);
-        transform: translateX(20px);
+        transform: translate3d(0,50%,0);
     }
-    h2{
-        transition-duration: 0.5s;
+    .container1 h2{
+        font-size: 40px;
+        font-weight: 8;
+        transition-duration: 1s;
         position: absolute;
-        left: 100px;
-        bottom: 120px;
+        left: 50px;
+        width: 300px;
+        bottom: 100px;
+        transform: translateY(40px);
     }
     .container1:hover h2
     {
-        transform: translateY(-30px);
+        transform: translateY(-80px);
         color: white;
     }
     .hide1
     {
-        transition-duration: 2s;
+        transition-duration: 1s;
+        text-align: center;
     }
     .container1:hover .hide1
     {
@@ -111,7 +135,6 @@
         left: 50px;
         transition-duration: 1s;
         text-align: center;
-        justify-content:center;
 
     }
     .content1 span
@@ -121,19 +144,33 @@
     .hide1
     {
         display: none;
+        position: absolute;
         margin-top: 5px;
         font-size: 15px;
+        width: 500px;
+        text-align: center;
     }
+    .hide2
+    {
+        display: block;
+        border: 10px solid rgb(180, 64, 64);
+        width: 1100px;
+        height: 1100px;
+        background-color:brown;
+        left: 900px;
+    }
+
 </style>
 <body>
     <div class="container">
-        <div class="img">
-            <img src="https://tympanus.net/Development/HoverEffectIdeas/img/12.jpg" width="500px" ;
-            height= "500px" alt="">
+        <div class="pic">
+            <img src="https://tympanus.net/Development/HoverEffectIdeas/img/12.jpg" alt="">
         </div>
         <div class="content">
-            nice
+            <h2>
+                nice
             <span>lily</span>
+            </h2>
             <p class="hide">Lily likes to play with crayons and pencils</p>
         </div>
     </div>
@@ -143,7 +180,7 @@
             height= "500px" alt="">
         </div>
         <div class="content1">
-            <h2 style="font-size:30px">
+            <h2>
                 holy
                 <span>sadie</span>
             </h2>
@@ -153,7 +190,7 @@
                 She had a dark soul.
             </p>
         </div>
-
+        <div class="hide2"></div>
     </div>
 </body>
 </html>
